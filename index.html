@@ -1,131 +1,295 @@
-<!DOCTYPE html>
-
-<html>
-
-  <head>
-    <img src="WebBanner2023.png" alt="Banner" width="1200" height="300">
-    <h1><b>ENG0018 Computer Laboratory 2025/2026</b></h1>
-    <h2>Student URN: 6954082</h2>
-    <hr>
-    <h2 style ="font-family:calibri;"><b>Conference paper: Bridge Deck Repairs</b></h2>
-    <hr>
-
-    <!style for tables>
-    <style>
-      table{
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 30%;
-
-      }
-
-      td, th {
-        border:1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-      }
-
-      tr:nth-child(even) {
-        background-color: #dddddd;
-      }
 
 
-
-
-      </style>
-
-    <style>
-      p.exl {
-        margin-left: 250px;
-      }
-    </style>
-  </head>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet"href="https://www.w3schools.com/w3css/4/w3.css">
+      
+    
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ENG0018 — Conference Paper</title>
+  <!-- External helper CSS (W3Schools) + small internal styles -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
-    .mySlides {display:none;}
+    body { background-color: #ffffff; margin: 20px 6% 40px 6%; font-family: Calibri, Arial, sans-serif; }
+    header img { max-width: 100%; height: auto; display: block; }
+    header h1 { margin: 8px 0; }
+    nav.table-of-contents { margin: 20px 0; }
+    .section { margin-bottom: 36px; }
+    .ex1 { margin-left: 20px; }
+    table.simple { border-collapse: collapse; width: 90%; }
+    table.simple th, table.simple td { border: 1px solid #bbb; padding: 6px 10px; }
+    #chart_div, #chart_div_line, #chart_div_col { width: 100%; height: 400px; }
+    .controls { margin: 12px 0; }
+    pre.references { background:#f7f7f7; padding:12px; }
+    footer { margin-top: 40px; font-size: 0.9rem; color:#555; }
+    .badge { display:inline-block; padding:6px 10px; border-radius:12px; background:#eee; margin-right:8px; }
   </style>
-  <bodystyle="background-color:#FFFFFF;margin-left:50px;">
+  <!-- Google Charts loader -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+  <!-- Banner: put WebBanner.png in your repo (see H1) -->
+  <header>
+    <img src="WebBanner.png" alt="University of Surrey banner (replace WebBanner.png in repo)" />
+    <h1>ENG0018 Computer Laboratory — Conference Paper (Web Version)</h1>
+    <h3>Student URN: <span id="studentURN">FEPSFY1234567</span></h3>
     <hr>
-    <h3 id="Abstract">Abstract</h3></bodystyle>
-  <pre>
-   ex1 
-  </pre>
-  <pclass="ex1">
-  <!table of contents>
-    <table>
+  </header>
 
-      <tr>
-        <th><h3>Table of contents</h3></th>
-      </tr>
-      <tr>
-        <td><a href="#Abstract">Abstract</td>
-      </tr>
-      <tr>
-        <td><a href="#Introduction">Introduction</td>
-      </tr>
-      <tr>
-        <td><a href="#Analysis and discussion">Analysis and discussion</a>td></td>
-      </tr>
-
-      <tr>
-        <td><a href="#References">References</td>
-      </tr>
+  <!-- Table of contents -->
+  <nav class="table-of-contents">
+    <table class="simple">
+      <tr><th><h3>Table of contents</h3></th></tr>
+      <tr><td><a href="#Abstract">Abstract</a></td></tr>
+      <tr><td><a href="#Introduction">Introduction</a></td></tr>
+      <tr><td><a href="#Analysis">Analysis and discussion</a></td></tr>
+      <tr><td><a href="#Charts">Charts (Google Charts)</a></td></tr>
+      <tr><td><a href="#Examples">JavaScript Examples</a></td></tr>
+      <tr><td><a href="#References">References</a></td></tr>
     </table>
+  </nav>
 
-    <!DOCTYPE html>
-<html>
-  <head>
-    <title>Change Button colour</title>
-  </head>
-  <body>
-    <button id="colorButton">Click me to change colour</button>
+  <!-- Abstract -->
+  <section id="Abstract" class="section">
+    <h3>Abstract</h3>
+    <pre class="ex1">This online article demonstrates the formatting and JavaScript functionality required for the ENG0018 conference paper. It includes a table of contents, section anchors, MathML, tabular data, Google Charts (bar, line, and column charts), a last-modified timestamp verified from GitHub, and an automatic word count for selected sections.</pre>
+  </section>
 
-    <script>
-      // Get a reference to the button element
-      var button=document.getElementByld("colorButton");
-      // Function to change the button color
-      function changeColor(){
-        // Generate a random color (hexadecimal)
-      var randomcolor="#"+ Math.floor(Math.random()*16777215).toString(16);
-        
-      // Set the button's background color to the random color
-        button.style.backgroundcolor=randomColor;
-      }
-      // Add a click event listener to the button
-      button.addEventListener("click",changeColor);
-    </script>
-  </body>
-</html>
-    
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Alert Input Text</title>
-  </head>
-  <body>
-    <input type="text" id="textInput" placeholder="Enter text"
-      <button id="alertButton">Show Alert</button>
-    <Script>
-    //Get references to the input field and button
-    var input- document.getElementById("textInput");
-    var button - document.getElementById("alertButton");
-    
-    // Function to show an alert with the input text
-    function showAlert(){
-      var inputText = input.value;
-      alert("You entered:" + input text);
+  <!-- Introduction -->
+  <section id="Introduction" class="section">
+    <h3>Introduction</h3>
+    <p id="Introduction_InText">Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learnt by an intelligent machine through the interaction of an oracle with the machine system, over a sequence of learning epochs. A distinctive component in an active system is the querying strategy, used to sample candidate training instances from a pool and evaluate them for informativeness, i.e., their potential to improve the classification model. Various strategies have been proposed including Query by Committee (Seung et al., 1992), Monte Carlo estimation (Roy and McCallum, 2001), uncertainty sampling (Lewis and Gale, 1994) and version space reduction (margin sampling) (Tong and Koller, 2001).</p>
+  </section>
+
+  <!-- Analysis and discussion -->
+  <section id="Analysis" class="section">
+    <h3 id="Analysis_and_discussion">Analysis and discussion</h3>
+    <p id="Analysis_InText">Irrespective of how the most informative pattern instances are chosen at each epoch they are presented for labeling, to a machine (database) or human oracle that has knowledge of the class labels. After adding the newly labeled instances to the current training set, a revised model is subsequently induced. A goal of this process is to achieve an efficient, incremental advancement of learning at each epoch.</p>
+
+    <!-- Example MathML -->
+    <h4>Mathematical example</h4>
+    <p>The quadratic formula (rendered in MathML):</p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mrow>
+        <mi>x</mi>
+        <mo>=</mo>
+        <mfrac>
+          <mrow>
+            <mo>-</mo><mi>b</mi><mo>&#x00B1;</mo><msqrt><msup><mi>b</mi><mn>2</mn></msup><mo>-</mo><mn>4</mn><mi>a</mi><mi>c</mi></msqrt>
+          </mrow>
+          <mrow><mn>2</mn><mi>a</mi></mrow>
+        </mfrac>
+      </mrow>
+    </math>
+
+    <!-- Small data table example -->
+    <h4>Bridge repairs — sample table</h4>
+    <table class="simple" aria-label="Bridge repairs example">
+      <tr><th>£ Cost of repairs</th><th>Lifespan of repairs (years)</th></tr>
+      <tr><td>0.7 million</td><td>2</td></tr>
+      <tr><td>1.5 million</td><td>5</td></tr>
+      <tr><td>3.0 million</td><td>10</td></tr>
+    </table>
+  </section>
+
+  <!-- Charts section -->
+  <section id="Charts" class="section">
+    <h3>Charts (Google Charts)</h3>
+    <p>This page includes three charts required by the lab workbook:</p>
+    <ol>
+      <li>Bar chart: population in 2023 for London, Birmingham, Edinburgh.</li>
+      <li>Line chart: population trend over the past 10 years for the three cities.</li>
+      <li>Column chart: monthly sales in 2023 (unique colours for each month).</li>
+    </ol>
+
+    <div id="chart_div"></div>
+    <hr>
+    <div id="chart_div_line"></div>
+    <hr>
+    <div id="chart_div_col"></div>
+  </section>
+
+  <!-- JavaScript examples + timestamp + word count -->
+  <section id="Examples" class="section">
+    <h3>JavaScript examples & page utilities</h3>
+
+    <div class="controls">
+      <button id="colorButton">Click me to change colour</button>
+      &nbsp;&nbsp;
+      <input id="textInput" type="text" placeholder="Type something" />
+      <button id="alertButton">Show alert</button>
+      &nbsp;&nbsp;
+      <button id="randButton">Random 1–10</button>
+      <p id="randPara">Click the random button to see a number here.</p>
+    </div>
+
+    <!-- Last-modified / GitHub verify -->
+    <div class="controls">
+      <span class="badge">Last commit (repo):</span>
+      <span id="lastCommit">(not checked)</span>
+      &nbsp;&nbsp;
+      <button id="verifyBtn">Verify Last Modified Time</button>
+      <p style="font-size:0.9rem;color:#444;">Note: replace <code>GITHUB_USER</code> and <code>GITHUB_REPO</code> in the script with your GitHub username and repository name (FY#######) so the verification works.</p>
+    </div>
+
+    <!-- Word count display -->
+    <div class="controls">
+      <span class="badge">Word count (selected sections):</span>
+      <span id="wordCount">0</span>
+    </div>
+  </section>
+
+  <!-- References -->
+  <section id="References" class="section">
+    <h3>References</h3>
+    <pre class="references">Toshihiko et al (2023). Example reference: https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034
+Angluin (1988). Cohn et al. (1994). Seung et al. (1992).</pre>
+  </section>
+
+  <footer>
+    <p>Instructions: edit this file (index.html) in your GitHub repository. Commit changes and upload <code>WebBanner.png</code> to the repo root. Configure Pages (Branch: main) to publish. For assessment, ensure you do not include personal identifying information other than the required URN format.</p>
+  </footer>
+
+  <!-- JavaScript: charts + utilities -->
+  <script>
+    // ---------- Basic JS examples ----------
+    // Change color button (H3 example 1)
+    const colorButton = document.getElementById('colorButton');
+    function changeColor() {
+      const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6,'0');
+      colorButton.style.backgroundColor = randomColor;
     }
-    // Add a click event listener to the button
-    button.addEventListener("click", showAlert);
-    </Script>
-  </body>
+    colorButton.addEventListener('click', changeColor);
+
+    // Alert with input (consolidation task 1)
+    document.getElementById('alertButton').addEventListener('click', () => {
+      const text = document.getElementById('textInput').value;
+      alert(text || 'You did not type anything.');
+    });
+
+    // Random number update (consolidation task 2)
+    document.getElementById('randButton').addEventListener('click', () => {
+      const n = Math.floor(Math.random()*10) + 1;
+      document.getElementById('randPara').textContent = 'Random number: ' + n;
+    });
+
+    // ---------- Word count function (LO 3.4) ----------
+    function countWordsInIds(ids) {
+      let total = 0;
+      ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        // get textContent and split on whitespace
+        const text = el.textContent || '';
+        const words = text.trim().split(/\s+/).filter(Boolean);
+        total += words.length;
+      });
+      return total;
+    }
+    function updateWordCount() {
+      // change these IDs if your sections use other IDs
+      const cnt = countWordsInIds(['Introduction_InText','Analysis_InText']);
+      document.getElementById('wordCount').textContent = cnt;
+    }
+    // initial count
+    updateWordCount();
+
+    // ---------- GitHub last commit verification (LO 3.3) ----------
+    // NOTE: Replace GITHUB_USER and GITHUB_REPO with your details
+    const GITHUB_USER = 'GITHUB_USER';
+    const GITHUB_REPO = 'GITHUB_REPO';
+    const lastCommitSpan = document.getElementById('lastCommit');
+
+    async function getLastUpdatedTime() {
+      if (GITHUB_USER === 'GITHUB_USER' || GITHUB_REPO === 'GITHUB_REPO') {
+        lastCommitSpan.textContent = '(set GITHUB_USER & GITHUB_REPO in index.html)';
+        return;
+      }
+      try {
+        const url = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/commits?per_page=1`;
+        const resp = await fetch(url);
+        if (!resp.ok) throw new Error('GitHub API error: ' + resp.status);
+        const commits = await resp.json();
+        if (commits && commits.length>0) {
+          const time = commits[0].commit.author.date;
+          lastCommitSpan.textContent = new Date(time).toLocaleString();
+        } else {
+          lastCommitSpan.textContent = '(no commits found)';
+        }
+      } catch (e) {
+        lastCommitSpan.textContent = '(error fetching commit: ' + e.message + ')';
+      }
+    }
+    document.getElementById('verifyBtn').addEventListener('click', getLastUpdatedTime);
+    // call once on load (will show placeholder until user edits constants)
+    getLastUpdatedTime();
+
+    // ---------- Google Charts (LO 3.2) ----------
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawCharts);
+
+    function drawCharts() {
+      drawPopulationBar();
+      drawPopulationLine();
+      drawMonthlySalesColumn();
+    }
+
+    // Consolidation Task 1: Bar chart of populations in 2023
+    function drawPopulationBar() {
+      const data = google.visualization.arrayToDataTable([
+        ['City', 'Population'],
+        ['London', 9648000],
+        ['Birmingham', 1153900],
+        ['Edinburgh', 554000]
+      ]);
+      const options = { title: 'Population in 2023', legend: {position: 'none'}, vAxis: {title:'Population'}, hAxis: {title:'City'}, colors:['#1b9e77'] };
+      const chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+
+    // Consolidation Task 2: Line chart — population trends (note: data provided every two years in H3)
+    function drawPopulationLine() {
+      const data = google.visualization.arrayToDataTable([
+        ['Year','London','Birmingham','Edinburgh'],
+        ['2013', 8414000, 1092200, 495000],
+        ['2015', 8661000, 1113000, 507000],
+        ['2017', 8916000, 1137100, 519000],
+        ['2019', 9177000, 1141800, 531000],
+        ['2021', 9426000, 1142500, 543000],
+        ['2023', 9648000, 1153900, 554000]
+      ]);
+      const options = { title: 'Population trend (2013–2023)', hAxis: {title:'Year'}, vAxis: {title:'Population'}, curveType: 'function' };
+      const chart = new google.visualization.LineChart(document.getElementById('chart_div_line'));
+      chart.draw(data, options);
+    }
+
+    // Consolidation Task 3: Column chart — monthly sales 2023 (unique color per column)
+    function drawMonthlySalesColumn() {
+      // example fictional sales (GBP)
+      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      const sales = [12000, 15000, 14000, 18000, 17000, 16000, 19000, 22000, 21000, 23000, 20000, 24000];
+      // Build DataTable with an extra 'style' column to set per-column colours
+      const data = new google.visualization.DataTable();
+      data.addColumn('string','Month');
+      data.addColumn('number','Sales (GBP)');
+      data.addColumn({type:'string', role:'style'});
+      // choose a palette
+      const palette = ['#3366cc','#dc3912','#ff9900','#109618','#990099','#0099c6','#dd4477','#66aa00','#b82e2e','#316395','#994499','#22aa99'];
+      for (let i=0;i<months.length;i++) data.addRow([months[i], sales[i], palette[i%palette.length]]);
+
+      const options = { title: 'Monthly Sales in 2023', legend: {position:'none'}, hAxis: {title:'Month'}, vAxis: {title:'Sales (in GBP)'} };
+      const chart = new google.visualization.ColumnChart(document.getElementById('chart_div_col'));
+      chart.draw(data, options);
+    }
+
+    // Redraw charts on window resize for responsiveness
+    window.addEventListener('resize', () => { drawCharts(); });
+
+  </script>
+</body>
 </html>
 
-      
-    
-      
     
 
       
