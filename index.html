@@ -73,7 +73,54 @@
         <td><a href="#References">References</td>
       </tr>
     </table>
-    
-    
-      
+
+    <!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Button colour</title>
+  </head>
+  <body>
+    <button id="colorButton">Click me to change colour</button>
+
+    <script>
+      // Get a reference to the button element
+      var button=document.getElementByld("colorButton");
+      // Function to change the button color
+      function changeColor(){
+        // Generate a random color (hexadecimal)
+      var randomcolor="#"+ Math.floor(Math.random()*16777215).toString(16);
+        
+      // Set the button's background color to the random color
+        button.style.backgroundcolor=randomColor;
+      }
+      // Add a click event listener to the button
+      button.addEventListener("click",changeColor);
+    </script>
+  </body>
 </html>
+    
+<!DOCTYPE htnl>
+<html>
+  <head>
+    <title>Alert Input Text</title>
+  </head>
+  <body>
+    <input type="text" id="textInput" placeholder="Enter text"
+      <button id="alertButton">Show Alert</button>
+    <Script>
+    //Get references to the input field and button
+    var input- document.getElementById("textInput");
+    var button - document.getElementById("alertButton");
+    
+    // Function to show an alert with the input text
+    function showAlert(){
+      var inputText = input.value;
+      alert("You entered:" + input text);
+    }
+    // Add a click event listener to the button
+    button.addEventListener("click", showAlert);
+    </Script>
+  </body>
+</html>
+      
+
